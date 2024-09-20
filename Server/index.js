@@ -7,6 +7,9 @@ const app = express();
 // Middleware
 app.use(express.json()); // For parsing application/json
 
+const cors = require('cors');
+app.use(cors());
+
 // Sample route to test the server
 app.get('/', (req, res) => {
     res.send('Server is running!');
